@@ -11,7 +11,7 @@ const App = () => {
   const [totalCount, setWaveCounter] = useState(0);
 
 
-  const contractAddress = "0xF848D08e296A23B81FCd347d979f1a1C88F73FA9";
+  const contractAddress = "0x288eAdD697e83b577F7DeB5b0DbbCCfb6e4F0AC2"
   const contractABI = abi.abi;
 
 
