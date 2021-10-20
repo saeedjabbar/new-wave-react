@@ -101,7 +101,7 @@ const App = () => {
 
         let count = await wavePortalContract.getTotalWaves();
         console.log("Retrieved total wave count...", count.toNumber());
-
+        getAllWaves();
 
         /*
         * Execute the actual wave from your smart contract
@@ -193,6 +193,7 @@ const App = () => {
   useEffect(() => {
     checkIfWalletIsConnected();
     waveCounter();
+    getAllWaves();
   }, [])
 
   return (
