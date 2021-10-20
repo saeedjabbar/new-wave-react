@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+body {
+    background: #000;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.purpleButton {
+    color: rgb(255, 255, 255);
+    background: linear-gradient(
+92.88deg, rgb(69, 94, 181) 9.16%, rgb(86, 67, 204) 43.89%, rgb(103, 63, 215) 64.72%);
+    cursor: pointer;
+    border: none;
+    flex-shrink: 0;
+    font-weight: 500;
+    transition: all 0.5s ease 0s;
+    text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 64px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dataContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 600px;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bio {
+  text-align: center;
+  color: #95a2b3;
+  margin-top: 16px;
+  font-size: 1.6rem;
+}
+
+.waveButton {
+  cursor: pointer;
+  margin-top: 16px;
+  padding: 8px;
+  border: 0;
+  border-radius: 5px;
+  
+}
+
+.msgBox{
+  background: linear-gradient( 
+180deg,#28292c 0%,rgba(39,40,43,0.82) 100%);
+  box-shadow: 0px 13px 40px rgb(0 0 0 / 30%), 0px 4px 4px rgb(0 0 0 / 20%);
+  color: #fff;
 }
