@@ -270,8 +270,8 @@ const App = () => {
               2) Chose the Rinkeby Test Network
               <br />
               3) Click Connect :) <br />
-              4) Get fake eth here: <a href="https://faucet.rinkeby.io/" rel="noreferrer">Rinkeby Faucet</a>
-              4) Donot use real ethereum or share your passphrase.
+              4) Get fake eth here: <a href="https://faucet.rinkeby.io/" rel="noreferrer">Rinkeby Faucet</a><br>
+              5) Donot use real ethereum or share your passphrase.
             </p>
           </div>
         )}
