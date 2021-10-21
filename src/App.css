@@ -57,6 +57,10 @@ body {
   
 }
 
+.white{
+  color: #fff;
+}
+
 .msgBox{
   background: linear-gradient( 
 180deg,#28292c 0%,rgba(39,40,43,0.82) 100%);

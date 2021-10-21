@@ -9,7 +9,7 @@ const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
   const [allWaves, setAllWaves] = useState([]);
   const [totalCount, setWaveCounter] = useState(0);
-  const [miningMsg, setMiningMsg] = useState("Mining On The Blockchain...")
+  const [miningMsg, setMiningMsg] = useState("Messsages from the blockverse...")
 
 
 
@@ -83,7 +83,6 @@ const App = () => {
     e.preventDefault()
     console.log('event2', e)
     console.log('form data2',formData)
-    console.log("form data2", formData.usermessage)
     // ... submit to API or something
     //call wave and pass in pessage
     wave(formData.usermessage)
@@ -233,12 +232,15 @@ const App = () => {
          * If there is no currentAccount render this button
          */}
         {!currentAccount && (
-          <button
-            className="waveButton btn btn-secondary"
-            onClick={connectWallet}
-          >
-            Connect Wallet
-          </button>
+          <div>
+            <button
+              className="waveButton w-100 btn btn-secondary"
+              onClick={connectWallet}
+            >
+              Connect Wallet
+            </button>
+            <p className="mt-3 white fs-5">1) Download MetaMask. 2) Chose the Rinkeby Test Network 3) Connect :)</p>
+          </div>
         )}
 
         <div className="row mt-2">
