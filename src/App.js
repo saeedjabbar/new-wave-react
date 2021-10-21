@@ -14,7 +14,7 @@ const App = () => {
 
 
 
-  const contractAddress = "0x3E6241bb6948c81529Bb1d8338953657fcEd608B"
+  const contractAddress = "0x8e98dF212ac2c5Ab91CF1C82B25aE37D696446b5"
   const contractABI = abi.abi;
 
 
@@ -124,6 +124,7 @@ const App = () => {
         console.log("Retrieved total wave count...", count.toNumber());
         setWaveCounter(count.toNumber());
         waveCounter()
+        setWinningMsg("You've won some fake eth.")
       } else {
         console.log("Ethereum object doesn't exist!");
       }
@@ -224,7 +225,7 @@ const App = () => {
                 👋
               </span>
             </button>
-            <div className="mt-5 fs-5">{setWinningMsg}</div>
+            <div className="mt-5 fs-5">{winningMsg}</div>
           </div>
         </div>
         <Row className="bio">Total Waves: {totalCount}</Row>
