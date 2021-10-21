@@ -9,6 +9,8 @@ const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
   const [allWaves, setAllWaves] = useState([]);
   const [totalCount, setWaveCounter] = useState(0);
+  const [miningMsg, setMiningMsg] = useState("Mining On The Blockchain...")
+
 
 
   const contractAddress = "0x288eAdD697e83b577F7DeB5b0DbbCCfb6e4F0AC2"
@@ -112,11 +114,13 @@ const App = () => {
 
         
         console.log("Mining...", waveTxn.hash);
+        setMiningMsg("Mining...")
 
         await waveTxn.wait();
         console.log("Mined -- ", waveTxn.hash);
-
+        setMiningMsg("Mined...")
         count = await wavePortalContract.getTotalWaves();
+        getAllWaves()
         console.log("Retrieved total wave count...", count.toNumber());
         setWaveCounter(count.toNumber());
         waveCounter()
@@ -223,6 +227,7 @@ const App = () => {
           </div>
         </div>
         <Row className="bio">Total Waves: {totalCount}</Row>
+        <Row className="bio">{miningMsg}</Row>
 
         {/*
          * If there is no currentAccount render this button
