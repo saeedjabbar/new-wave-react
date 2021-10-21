@@ -109,7 +109,7 @@ const App = () => {
         * Execute the actual wave from your smart contract
         */
        //pass in usr msg here
-        const waveTxn = await wavePortalContract.wave(usermessage)
+        const waveTxn = await wavePortalContract.wave(, { gasLimit: 300000 })
 
 
         
