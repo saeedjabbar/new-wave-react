@@ -14,7 +14,7 @@ const App = () => {
 
 
 
-  const contractAddress = "0xEB7B830326f53967a2ACA53cC93aa2F122b51E40"
+  const contractAddress = "0x753bd94E37B7838e674fD06155A86e97b190980b"
   const contractABI = abi.abi;
 
 
