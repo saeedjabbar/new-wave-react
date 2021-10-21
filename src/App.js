@@ -237,7 +237,7 @@ const App = () => {
               className="waveButton w-100 btn btn-secondary"
               onClick={connectWallet}
             >
-              Connect Wallet
+              Connect Wallet to Play the Game
             </button>
             <p className="mt-3 white fs-5">1) Download MetaMask. 2) Chose the Rinkeby Test Network 3) Connect :)</p>
           </div>
