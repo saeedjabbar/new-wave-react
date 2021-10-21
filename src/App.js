@@ -242,12 +242,12 @@ const App = () => {
             <p className="mt-3 white fs-5">
               1) Download{" "}
               <a target="_blank" href="https://metamask.io/">
-                MetaMask.
+                MetaMask Chrome/Brave Addon.
               </a>{" "}
               <br />
               2) Chose the Rinkeby Test Network
               <br /> 
-              3) Connect :)
+              3) Click Connect :) <br/>
               4) Donot use real ethereum or share your passphrase.
             </p>
           </div>
