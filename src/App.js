@@ -126,7 +126,7 @@ const App = () => {
         console.log("Retrieved total wave count...", count.toNumber());
         setWaveCounter(count.toNumber());
         waveCounter()
-        setWinningMsg("You've won some fake eth.")
+        //setWinningMsg("You've won some fake eth.")
       } else {
         console.log("Ethereum object doesn't exist!");
       }
@@ -195,18 +195,18 @@ const App = () => {
         /**
          * Listen in for emitter events!
          */
-        wavePortalContract.on("NewWave", (from, timestamp, message) => {
-          console.log("NewWave", from, timestamp, message)
+        // wavePortalContract.on("NewWave", (from, timestamp, message) => {
+        //   console.log("NewWave", from, timestamp, message)
 
-          setAllWaves((prevState) => [
-            ...prevState,
-            {
-              address: from,
-              timestamp: new Date(timestamp * 1000),
-              message: message,
-            },
-          ])
-        })
+        //   setAllWaves((prevState) => [
+        //     ...prevState,
+        //     {
+        //       address: from,
+        //       timestamp: new Date(timestamp * 1000),
+        //       message: message,
+        //     },
+        //   ])
+        // })
       } else {
         console.log("Ethereum object doesn't exist!")
       }
@@ -245,7 +245,6 @@ const App = () => {
                 👋
               </span>
             </button>
-            <div className="mt-5 fs-5">{winningMsg}</div>
           </div>
         </div>
         <Row className="bio">Total Waves: {totalCount}</Row>
@@ -271,6 +270,7 @@ const App = () => {
               2) Chose the Rinkeby Test Network
               <br />
               3) Click Connect :) <br />
+              4) Get fake eth here: <a href="https://faucet.rinkeby.io/" rel="noreferrer">Rinkeby Faucet</a>
               4) Donot use real ethereum or share your passphrase.
             </p>
           </div>
