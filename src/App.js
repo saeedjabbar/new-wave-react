@@ -14,7 +14,7 @@ const App = () => {
 
 
 
-  const contractAddress = "0x8e98dF212ac2c5Ab91CF1C82B25aE37D696446b5"
+  const contractAddress = "0xEB7B830326f53967a2ACA53cC93aa2F122b51E40"
   const contractABI = abi.abi;
 
 
@@ -162,33 +162,51 @@ const App = () => {
     try {
       const { ethereum } = window;
       if (ethereum) {
-        const provider = new ethers.providers.Web3Provider(ethereum);
-        const signer = provider.getSigner();
-        const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
+        const provider = new ethers.providers.Web3Provider(ethereum)
+        const signer = provider.getSigner()
+        const wavePortalContract = new ethers.Contract(
+          contractAddress,
+          contractABI,
+          signer
+        )
 
         /*
          * Call the getAllWaves method from your Smart Contract
          */
-        const waves = await wavePortalContract.getAllWaves();
-
+        const waves = await wavePortalContract.getAllWaves()
 
         /*
          * We only need address, timestamp, and message in our UI so let's
          * pick those out
          */
-        let wavesCleaned = [];
-        waves.forEach(wave => {
+        let wavesCleaned = []
+        waves.forEach((wave) => {
           wavesCleaned.push({
             address: wave.waver,
             timestamp: new Date(wave.timestamp * 1000),
-            message: wave.message
-          });
-        });
+            message: wave.message,
+          })
+        })
 
         /*
          * Store our data in React State
          */
-        setAllWaves(wavesCleaned);
+        setAllWaves(wavesCleaned)
+        /**
+         * Listen in for emitter events!
+         */
+        wavePortalContract.on("NewWave", (from, timestamp, message) => {
+          console.log("NewWave", from, timestamp, message)
+
+          setAllWaves((prevState) => [
+            ...prevState,
+            {
+              address: from,
+              timestamp: new Date(timestamp * 1000),
+              message: message,
+            },
+          ])
+        })
       } else {
         console.log("Ethereum object doesn't exist!")
       }
