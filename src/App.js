@@ -13,7 +13,7 @@ const App = () => {
 
 
 
-  const contractAddress = "0x288eAdD697e83b577F7DeB5b0DbbCCfb6e4F0AC2"
+  const contractAddress = "0xd95Ef2B9E2fBEA23120647fF9525d6A1e554A0cB"
   const contractABI = abi.abi;
 
 
@@ -241,7 +241,7 @@ const App = () => {
             </button>
             <p className="mt-3 white fs-5">
               1) Download{" "}
-              <a target="_blank" href="https://metamask.io/">
+              <a target="_blank" rel="noreferrer" href="https://metamask.io/">
                 MetaMask Chrome/Brave Addon.
               </a>{" "}
               <br />
