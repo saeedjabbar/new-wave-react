@@ -9,7 +9,7 @@ const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
   const [allWaves, setAllWaves] = useState([]);
   const [totalCount, setWaveCounter] = useState(0);
-  const [miningMsg, setMiningMsg] = useState("Messsages from the blockverse...")
+  const [miningMsg, setMiningMsg] = useState("Messages from the blockverse...")
 
 
 
@@ -239,7 +239,17 @@ const App = () => {
             >
               Connect Wallet to Play the Game
             </button>
-            <p className="mt-3 white fs-5">1) Download MetaMask. 2) Chose the Rinkeby Test Network 3) Connect :)</p>
+            <p className="mt-3 white fs-5">
+              1) Download{" "}
+              <a target="_blank" href="https://metamask.io/">
+                MetaMask.
+              </a>{" "}
+              <br />
+              2) Chose the Rinkeby Test Network
+              <br /> 
+              3) Connect :)
+              4) Donot use real ethereum or share your passphrase.
+            </p>
           </div>
         )}
 
