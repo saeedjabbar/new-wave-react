@@ -218,7 +218,7 @@ const App = () => {
               onClick={handleSubmit}
               className="btn btn-primary purpleButton mt-3 w-100"
             >
-              Wave at Me
+              Wave at Saeed
               <span role="img" aria-label="wave">
                 👋
               </span>
