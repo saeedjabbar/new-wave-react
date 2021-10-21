@@ -10,10 +10,11 @@ const App = () => {
   const [allWaves, setAllWaves] = useState([]);
   const [totalCount, setWaveCounter] = useState(0);
   const [miningMsg, setMiningMsg] = useState("Messages from the blockverse...")
+  const [winningMsg, setWinningMsg] = useState("")
 
 
 
-  const contractAddress = "0xF5aeef02aD76D31678804E19e9179DeA755A0d24"
+  const contractAddress = "0x3E6241bb6948c81529Bb1d8338953657fcEd608B"
   const contractABI = abi.abi;
 
 
@@ -223,6 +224,7 @@ const App = () => {
                 👋
               </span>
             </button>
+            <div className="mt-5 fs-5">{setWinningMsg}</div>
           </div>
         </div>
         <Row className="bio">Total Waves: {totalCount}</Row>
@@ -246,8 +248,8 @@ const App = () => {
               </a>{" "}
               <br />
               2) Chose the Rinkeby Test Network
-              <br /> 
-              3) Click Connect :) <br/>
+              <br />
+              3) Click Connect :) <br />
               4) Donot use real ethereum or share your passphrase.
             </p>
           </div>
