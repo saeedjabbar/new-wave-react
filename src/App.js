@@ -110,7 +110,7 @@ const App = () => {
         */
        //pass in usr msg here
         const waveTxn = await wavePortalContract.wave(usermessage, {
-          gasLimit: 300000,
+          gasLimit: 900000,
         })
 
 
